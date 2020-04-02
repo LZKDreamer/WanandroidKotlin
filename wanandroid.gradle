@@ -1,0 +1,65 @@
+ext{
+    android = [
+            compileSdkVersion: 29,
+            buildToolsVersion: "29.0.2",
+            applicationId    : "com.lzk.wanandroidkotlin",
+            minSdkVersion    : 21,
+            targetSdkVersion : 29,
+            versionCode      : 1,
+            versionName      : "1.0",
+            minifyEnabled    : false,
+    ]
+
+    dependVersion = [
+            appcompat               : "1.1.0",
+            core_ktx                : "1.2.0",
+            constraintlayout        : "1.1.3",
+            design                  : "28.0.0",
+            cardview                : "1.0.0",
+            bottomNavigationViewEx  : "2.0.4",
+            immersionbar            : "3.0.0",
+            bga_banner              : "3.0.0",
+            smartRefreshLayout      : "1.1.2",
+            loadSir                 : "1.3.8",
+            retrofit                : "2.8.0",
+            gson                    : "2.8.6",
+            brvah                   : "3.0.1",
+            glide                   : "4.11.0",
+            cookie_jar              : "1.0.1",
+            agent_web               : "4.1.3",
+            magic_indicator         : "1.5.0",
+            flow_layout             : "1.1.2",
+            circle_imageview        : "3.1.0",
+            eventbus                : "3.2.0",
+            litepal                 : "3.0.0" ,
+    ]
+
+    dependLibs = [
+            kotlin_stdlib           : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            appcompat               : "androidx.appcompat:appcompat:${dependVersion.appcompat}",
+            core_ktx                : "androidx.core:core-ktx:${dependVersion.core_ktx}",
+            constraintlayout        : "androidx.constraintlayout:constraintlayout:${dependVersion.constraintlayout}",
+            design                  : "com.android.support:design:${dependVersion.design}",
+            cardview                : "androidx.cardview:cardview:${dependVersion.cardview}",
+            bottomNavigationViewEx  : "com.github.ittianyu:BottomNavigationViewEx:${dependVersion.bottomNavigationViewEx}",
+            immersionbar            : "com.gyf.immersionbar:immersionbar:${dependVersion.immersionbar}",
+            immersionbar_ktx        : "com.gyf.immersionbar:immersionbar-ktx:${dependVersion.immersionbar}",
+            bga_banner              : "cn.bingoogolapple:bga-banner:${dependVersion.bga_banner}@aar",
+            smartRefreshLayout      : "com.scwang.smartrefresh:SmartRefreshLayout:${dependVersion.smartRefreshLayout}",
+            loadSir                 : "com.kingja.loadsir:loadsir:${dependVersion.loadSir}",
+            retrofit                : "com.squareup.retrofit2:retrofit:${dependVersion.retrofit}",
+            converter_gson          : "com.squareup.retrofit2:converter-gson:${dependVersion.retrofit}",
+            gson                    : "com.google.code.gson:gson:${dependVersion.gson}",
+            brvah                   : "com.github.CymChad:BaseRecyclerViewAdapterHelper:${dependVersion.brvah}",
+            glide                   : "com.github.bumptech.glide:glide:${dependVersion.glide}",
+            cookie_jar              : "com.github.franmontiel:PersistentCookieJar:${dependVersion.cookie_jar}",
+            agent_web               : "com.just.agentweb:agentweb:${dependVersion.agent_web}",
+            magic_indicator         : "com.github.hackware1993:MagicIndicator:${dependVersion.magic_indicator}",
+            flow_layout             : "com.hyman:flowlayout-lib:${dependVersion.flow_layout}",
+            circle_imageview        : "de.hdodenhof:circleimageview:${dependVersion.circle_imageview}",
+            eventbus                : "org.greenrobot:eventbus:${dependVersion.eventbus}",
+            litepal                 : "org.litepal.android:kotlin:${dependVersion.litepal}"
+    ]
+
+    extraLibs = dependLibs.values()
+}
