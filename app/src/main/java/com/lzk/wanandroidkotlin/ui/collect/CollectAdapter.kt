@@ -42,7 +42,7 @@ class CollectAdapter : BaseDelegateMultiAdapter<CollectBean,BaseViewHolder>() {
         when(helper.itemViewType){
             TYPE_ARTICLE -> {
                 item.apply {
-                    helper.setText(R.id.article_author_tv,author)
+                    helper.setText(R.id.article_author_tv,if (author.isEmpty()) "匿名用户" else author)
                     helper.setText(R.id.article_time_tv,niceDate)
                     helper.setText(R.id.article_title_tv,title.htmlFormat())
                     helper.setText(R.id.article_category_tv,chapterName)
@@ -56,7 +56,7 @@ class CollectAdapter : BaseDelegateMultiAdapter<CollectBean,BaseViewHolder>() {
             }
             TYPE_PROJECT -> {
                 item.apply {
-                    helper.setText(R.id.project_author_tv,author)
+                    helper.setText(R.id.project_author_tv,if (author.isEmpty()) "匿名用户" else author)
                     helper.setText(R.id.project_time_tv,niceDate)
                     helper.setText(R.id.project_content_tv,desc.htmlFormat())
                     helper.setText(R.id.project_category_tv,chapterName)

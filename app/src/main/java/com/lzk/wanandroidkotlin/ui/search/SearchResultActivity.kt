@@ -79,7 +79,7 @@ class SearchResultActivity : BaseMVPActivity<SearchResultContract.View,SearchRes
                 WebActivity.start(this@SearchResultActivity,data[position])
             }
 
-            setOnItemClickListener { adapter, view, position ->
+            setOnItemChildClickListener { adapter, view, position ->
                 if (UserHelper.isLogin()){
                     mAdapter.data[position].let {
                         if (it.collect){
