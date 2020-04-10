@@ -20,6 +20,9 @@ android {
         versionName rootProject.android.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        flavorDimensions "default"
+        manifestPlaceholders = [APP_CHANNEL_VALUE: "WanAndroidKotlin"]
     }
 
     signingConfigs {
@@ -41,6 +44,24 @@ android {
         }
     }
 
+    productFlavors{
+        wanandroid{
+            manifestPlaceholders = [APP_CHANNEL_VALUE: "WandroidKotlin"]
+        }
+        baidu{
+            manifestPlaceholders = [APP_CHANNEL_VALUE: "baidu"]
+        }
+        xiaomi{
+            manifestPlaceholders = [APP_CHANNEL_VALUE: "xiaomi"]
+        }
+        huawei{
+            manifestPlaceholders = [APP_CHANNEL_VALUE: "huawei"]
+        }
+
+        productFlavors.all{
+            flavor -> flavor.manifestPlaceholders = [APP_CHANNEL_VALUE: name]
+        }
+    }
 }
 
 dependencies {

@@ -14,25 +14,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.collect.CollectActivity"></activity>
+        <!-- 适配华为（huawei）刘海屏 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+        <!-- 适配小米（xiaomi）刘海屏 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+        <meta-data
+            android:name="APP_CHANNEL"
+            android:value="${APP_CHANNEL_VALUE}"
+            />
+        <activity android:name=".ui.collect.CollectActivity"/>
         <activity android:name=".ui.integral.IntegralRankListActivity" />
         <activity android:name=".ui.integral.IntegralHistoryActivity" />
         <activity android:name=".ui.search.SearchResultActivity" />
         <activity android:name=".ui.search.SearchActivity" />
         <activity
-            android:name=".ui.user.RegisterActivity"
-            android:launchMode="singleTask" />
+        android:name=".ui.user.RegisterActivity"
+        android:launchMode="singleTask" />
         <activity
-            android:name=".ui.user.LoginActivity"
-            android:launchMode="singleTask" />
+        android:name=".ui.user.LoginActivity"
+        android:launchMode="singleTask" />
         <activity android:name=".ui.tree.system.SystemTabActivity" />
-        <activity android:name=".ui.main.WebActivity" /> <!-- 适配华为（huawei）刘海屏 -->
-        <meta-data
-            android:name="android.notch_support"
-            android:value="true" /> <!-- 适配小米（xiaomi）刘海屏 -->
-        <meta-data
-            android:name="notch.config"
-            android:value="portrait|landscape" />
+        <activity android:name=".ui.main.WebActivity" />
 
         <activity
             android:name=".ui.main.SplashActivity"
