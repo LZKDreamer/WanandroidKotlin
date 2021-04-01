@@ -66,7 +66,7 @@ class ProjectChildFragment : BaseMVPFragment<ProjectChildContract.View,ProjectCh
                     WebActivity.start(mContext,data[position])
                 }
 
-                setOnItemClickListener { adapter, view, position ->
+                setOnItemChildClickListener{ adapter, view, position ->
                     if (UserHelper.isLogin()){
                         mAdapter.data[position].let {
                             if (it.collect){

@@ -47,7 +47,7 @@ class SquareFragment : BaseMVPFragment<SquareContract.View,SquarePresenter>(),Sq
                 WebActivity.start(mContext,data[position])
             }
 
-            setOnItemClickListener { adapter, view, position ->
+            setOnItemChildClickListener { adapter, view, position ->
                if (UserHelper.isLogin()){
                    mAdapter.data[position].let {
                        if (it.collect){
